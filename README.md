@@ -1,5 +1,5 @@
 <div align="center">
-    <h2>Hyperstroke: A Novel High-quality Stroke Representation for Assistive Artistic Drawing</h2>
+    <h1>Hyperstroke: A Novel High-quality Stroke Representation for Assistive Artistic Drawing</h1>
     <img src="assets/logo.png" width=300><br><br>
     <a href="https://haoyunqin.com">Haoyun Qin</a>, <a href="https://github.com/dmMaze">Jian Lin</a>, <a href="https://github.com/hyliu">Hanyuan Liu</a>, Xueting Liu, <a href="https://moeka.me">Chengze Li</a><br> <em>SIGGRAPH Asia 2024</em><br><br>
     <a href="https://asia.siggraph.org/2024/"><img src="https://img.shields.io/badge/SIGGRAPH%20Asia-2024-blue?style=" alt=""></a>
@@ -22,6 +22,8 @@ Assistive drawing aims to facilitate the creative process by providing intellige
 
 ### 🌈 Representation Showcase
 
+We demonstrate the effectiveness of our hyperstroke representation on both real-life timelapse drawing data and synthetic dataset.
+
 ![](assets/showcase-rep-timelapse.png)
 
 *Hyperstroke model result on real-life timelapse drawing data. For each group, the four rows from the top to the bottom stand for the previous frame, the latter frame, the predicted strokes between the two frames, and finally the blended result of the predicted strokes onto the initial frames.*
@@ -31,6 +33,8 @@ Assistive drawing aims to facilitate the creative process by providing intellige
 *Hyperstroke model result on synthetic dataset. For each group, the five rows from the top to the bottom stand for the original cropped illustration, the generated ground truth stroke images, the blended illustration by the ground truth, the predicted strokes between the two frames, and finally the blended result of the predicted strokes.*
 
 ### 🌈 Autoregressive Generation Showcase
+
+Our generation model is trained and evaluated on the QuickDraw dataset.
 
 ![](assets/showcase-gen-seen-blank.png)
 
@@ -49,6 +53,22 @@ pip install -r requirements.txt
 ```
 
 ## 💫 Inference
+
+### Example Script
+
+To test Quickdraw generation, run the following command:
+
+```bash
+python inference/generation.py
+```
+
+To test VQ stroke reconstruction, run the following command:
+
+```bash
+python inference/representation.py
+```
+
+### Gradio Demo
 
 Coming soon.
 
